@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://dijpfc2wlm3w6"]
+
+[ext_resource type="PackedScene" uid="uid://cktdbd823hnor" path="res://scenes/item_texture.tscn" id="1_ppnaf"]
+[ext_resource type="Texture2D" uid="uid://y45ghjvgmkhv" path="res://assets/White.png" id="2_wkotv"]
+[ext_resource type="PackedScene" uid="uid://db6s27kgg5w1k" path="res://scenes/white.tscn" id="3_km2qw"]
+
+[node name="item_white" instance=ExtResource("1_ppnaf")]
+texture = ExtResource("2_wkotv")
+this_scene = ExtResource("3_km2qw")

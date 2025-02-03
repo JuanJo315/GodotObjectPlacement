@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7i65ov2l15ph"]
+
+[ext_resource type="PackedScene" uid="uid://4pl1pjsoasau" path="res://scenes/entity.tscn" id="1_06aoa"]
+[ext_resource type="Script" path="res://scripts/chicken.gd" id="2_r3xq1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d1ose"]
+radius = 9.05539
+
+[node name="chicken" instance=ExtResource("1_06aoa")]
+script = ExtResource("2_r3xq1")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_d1ose")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+animation = &"chicken"

@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2mhdvg51dg5g"]
+
+[ext_resource type="Script" path="res://scripts/tab_container.gd" id="1_c770r"]
+[ext_resource type="PackedScene" uid="uid://dm8cpmwyo7glp" path="res://scenes/item_chicken.tscn" id="1_vhqbw"]
+[ext_resource type="Script" path="res://scripts/scroll_container.gd" id="2_wpckl"]
+[ext_resource type="PackedScene" uid="uid://dijpfc2wlm3w6" path="res://scenes/item_white.tscn" id="3_w2lqs"]
+[ext_resource type="PackedScene" uid="uid://dgxb14w0k5fym" path="res://scenes/tiles.tscn" id="4_7aj3p"]
+
+[node name="Item_Selector" type="CanvasLayer"]
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -333.0
+offset_bottom = 230.0
+grow_horizontal = 0
+tab_alignment = 1
+current_tab = 1
+script = ExtResource("1_c770r")
+metadata/_edit_group_ = true
+
+[node name="Tiles" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Tiles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_wpckl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Tiles/ScrollContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Tiles/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="item_tile0" parent="TabContainer/Tiles/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_vhqbw")]
+layout_mode = 2
+texture = null
+this_scene = ExtResource("4_7aj3p")
+
+[node name="Animals" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Animals"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_wpckl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Animals/ScrollContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Animals/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="item_chicken" parent="TabContainer/Animals/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_vhqbw")]
+layout_mode = 2
+
+[node name="People" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/People"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_wpckl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/People/ScrollContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/People/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="item_white" parent="TabContainer/People/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_w2lqs")]
+layout_mode = 2
+
+[connection signal="mouse_entered" from="TabContainer/Tiles/ScrollContainer" to="TabContainer/Tiles/ScrollContainer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TabContainer/Tiles/ScrollContainer" to="TabContainer/Tiles/ScrollContainer" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="TabContainer/Animals/ScrollContainer" to="TabContainer/Animals/ScrollContainer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TabContainer/Animals/ScrollContainer" to="TabContainer/Animals/ScrollContainer" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="TabContainer/People/ScrollContainer" to="TabContainer/People/ScrollContainer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TabContainer/People/ScrollContainer" to="TabContainer/People/ScrollContainer" method="_on_mouse_exited"]

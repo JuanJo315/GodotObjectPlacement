@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://4pl1pjsoasau"]
+
+[ext_resource type="Texture2D" uid="uid://mxua34xhafg" path="res://assets/Small-8-Direction-Characters_by_AxulArt.png" id="1_04uqp"]
+[ext_resource type="Texture2D" uid="uid://bp1tvbbaeobg1" path="res://assets/chicken.png" id="2_cuj5u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bloaj"]
+atlas = ExtResource("1_04uqp")
+region = Rect2(64, 144, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klkk1"]
+atlas = ExtResource("2_cuj5u")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rskxi"]
+atlas = ExtResource("1_04uqp")
+region = Rect2(32, 240, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lf1qg"]
+atlas = ExtResource("1_04uqp")
+region = Rect2(64, 48, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_th00m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bloaj")
+}],
+"loop": true,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klkk1")
+}],
+"loop": true,
+"name": &"chicken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rskxi")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lf1qg")
+}],
+"loop": true,
+"name": &"white",
+"speed": 5.0
+}]
+
+[node name="Entity" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_th00m")
+animation = &"white"

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://db6s27kgg5w1k"]
+
+[ext_resource type="PackedScene" uid="uid://4pl1pjsoasau" path="res://scenes/entity.tscn" id="1_ejykt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8xkl7"]
+radius = 6.08276
+
+[node name="White" instance=ExtResource("1_ejykt")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_8xkl7")

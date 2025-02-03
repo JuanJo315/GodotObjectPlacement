@@ -1,0 +1,39 @@
+Version 1: Creating a level editor 
+	
+	Added a user interface to place items 
+	Tab bar with different items in each section 
+	Hid the item on the interface 
+	
+Version 2: Camera Movement 
+	
+	Added Zoom In and Out functions 
+	Added movement through the WASD Keys 
+	Added Click and Drag with the Middle Mouse button 
+
+Version 3: Game Mode 
+	
+	Used a Singleton to switch game modes 
+	Used Input "toggle_editor" with Key E in the 
+	tab_container script to hide it and start the game 
+	while keeping the tiles position before it runs 
+
+Version 4: Player Control 
+	
+	Cambiar el TileMap por individual tiles
+	Se crea un Nodo donde se arrastra el PNG 
+	que se quiera dividir en tiles individuales 
+	
+	We use NinePatchRect and set the Region Rect 
+	to 32 by 32 so we get 1 tile and w and h are used 
+	to move the region 
+	
+	Can also be done through the Edit Region 
+	Square Adjust Mode and 32 by 32 steps
+	We save the scene and convert to a TileSet
+	
+	Can't do it, will try to resolve later through 
+	another project code and use a png as a place holder 
+	
+Version 5: Save and Load Files 
+	
+	

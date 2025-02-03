@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm8cpmwyo7glp"]
+
+[ext_resource type="PackedScene" uid="uid://cktdbd823hnor" path="res://scenes/item_texture.tscn" id="1_ahd46"]
+[ext_resource type="Texture2D" uid="uid://mn0ayfraubmc" path="res://assets/chicken1.png" id="2_45msp"]
+[ext_resource type="PackedScene" uid="uid://c7i65ov2l15ph" path="res://scenes/chicken.tscn" id="2_oxyrs"]
+
+[node name="item_chicken" instance=ExtResource("1_ahd46")]
+texture = ExtResource("2_45msp")
+this_scene = ExtResource("2_oxyrs")

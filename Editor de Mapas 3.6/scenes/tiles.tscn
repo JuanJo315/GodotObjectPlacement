@@ -1,0 +1,180 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgxb14w0k5fym"]
+
+[ext_resource type="Texture2D" uid="uid://d1nwcavtu5e2i" path="res://assets/TX Tileset Wall.png" id="1_6wocw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6r3m"]
+size = Vector2(32, 32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w411g"]
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Tiles" type="Node"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+offset_right = 512.0
+offset_bottom = 512.0
+texture = ExtResource("1_6wocw")
+region_rect = Rect2(0, 0, 512, 512)
+
+[node name="0" type="NinePatchRect" parent="."]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("1_6wocw")
+region_rect = Rect2(32, 32, 32, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/StaticBody2D"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_k6r3m")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="0"]
+occluder = SubResource("OccluderPolygon2D_w411g")
+
+[node name="1" type="NinePatchRect" parent="."]
+offset_left = 96.0
+offset_top = 32.0
+offset_right = 128.0
+offset_bottom = 64.0
+texture = ExtResource("1_6wocw")
+region_rect = Rect2(64, 32, 32, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1/StaticBody2D"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_k6r3m")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="1"]
+occluder = SubResource("OccluderPolygon2D_w411g")
+
+[node name="2" type="NinePatchRect" parent="."]
+offset_left = 160.0
+offset_top = 32.0
+offset_right = 192.0
+offset_bottom = 64.0
+texture = ExtResource("1_6wocw")
+region_rect = Rect2(96, 32, 32, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2/StaticBody2D"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_k6r3m")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="2"]
+occluder = SubResource("OccluderPolygon2D_w411g")
+
+[node name="3" type="NinePatchRect" parent="."]
+offset_left = 32.0
+offset_top = 96.0
+offset_right = 64.0
+offset_bottom = 128.0
+texture = ExtResource("1_6wocw")
+region_rect = Rect2(32, 96, 32, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3/StaticBody2D"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_k6r3m")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="3"]
+occluder = SubResource("OccluderPolygon2D_w411g")
+
+[node name="4" type="NinePatchRect" parent="."]
+offset_left = 96.0
+offset_top = 96.0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("1_6wocw")
+region_rect = Rect2(64, 96, 32, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4/StaticBody2D"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_k6r3m")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="4"]
+occluder = SubResource("OccluderPolygon2D_w411g")
+
+[node name="5" type="NinePatchRect" parent="."]
+offset_left = 160.0
+offset_top = 96.0
+offset_right = 192.0
+offset_bottom = 128.0
+texture = ExtResource("1_6wocw")
+region_rect = Rect2(96, 96, 32, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="5/StaticBody2D"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_k6r3m")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="5"]
+occluder = SubResource("OccluderPolygon2D_w411g")
+
+[node name="6" type="NinePatchRect" parent="."]
+offset_left = 32.0
+offset_top = 160.0
+offset_right = 64.0
+offset_bottom = 192.0
+texture = ExtResource("1_6wocw")
+region_rect = Rect2(32, 128, 32, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="6/StaticBody2D"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_k6r3m")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="6"]
+occluder = SubResource("OccluderPolygon2D_w411g")
+
+[node name="7" type="NinePatchRect" parent="."]
+offset_left = 96.0
+offset_top = 160.0
+offset_right = 128.0
+offset_bottom = 192.0
+texture = ExtResource("1_6wocw")
+region_rect = Rect2(64, 128, 32, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="7/StaticBody2D"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_k6r3m")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="7"]
+occluder = SubResource("OccluderPolygon2D_w411g")
+
+[node name="8" type="NinePatchRect" parent="."]
+offset_left = 160.0
+offset_top = 160.0
+offset_right = 192.0
+offset_bottom = 192.0
+texture = ExtResource("1_6wocw")
+region_rect = Rect2(96, 128, 32, 32)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="8/StaticBody2D"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_k6r3m")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="8"]
+occluder = SubResource("OccluderPolygon2D_w411g")

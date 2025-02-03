@@ -1,0 +1,21 @@
+We need to change the Item_Selector 
+type from a Control Node to a Canvas Layer 
+through a "Change Type" after right clicking it 
+
+This is because a Control node will stay in place 
+when the player moves around the map, so the menu 
+won't follow it 
+
+The canvas layer makes it so it's always there 
+
+To also avoid creating items when clicking on the tab 
+we add a hide function and add a script to a scroll container 
+
+For the camera we create a Node2D called camera_container
+and tried to add zoom in, out and panoramic mode 
+
+Didn't work so we try another method
+
+We add keyboard shortcuts for the camera with 
+the WASD keys, wheel up and down and the middle 
+mouse button in the input map section 

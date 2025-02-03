@@ -1,0 +1,3 @@
+Las escenas heredadas usan una escena ya creada como Entity.tscn 
+para crear otras escenas con los mismos atributos bases como Chicken y White 
+o Item_texture para hacer Item_chicken o Item_white
